@@ -1,0 +1,232 @@
+{% assign amount_of_links = 0 %}
+<div class="page-width" {% if collection.metafields.custom.artist_collection_background_color != blank %} style="background-color: {{ collection.metafields.custom.artist_collection_background_color }}"{% endif %}>
+  <ul class="artist__social" style="justify-content: {{ section.settings.button_alignment }} !important;">
+    {%- if section.settings.social_website != blank -%}
+      {% assign amount_of_links = amount_of_links | plus: 1 %}
+      <li class="artist__social-item">
+        <a target="_blank" rel="noopener" href="{{ section.settings.social_website }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Website' }}">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="icon icon-website" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 490 490" style="enable-background:new 0 0 490 490;" xml:space="preserve"><path d="M245,0C109.69,0,0,109.69,0,245s109.69,245,245,245s245-109.69,245-245S380.31,0,245,0z M31.401,260.313h52.542  c1.169,25.423,5.011,48.683,10.978,69.572H48.232C38.883,308.299,33.148,284.858,31.401,260.313z M320.58,229.688  c-1.152-24.613-4.07-47.927-8.02-69.572h50.192c6.681,20.544,11.267,43.71,12.65,69.572H320.58z M206.38,329.885  c-4.322-23.863-6.443-47.156-6.836-69.572h90.913c-0.392,22.416-2.514,45.709-6.837,69.572H206.38z M276.948,360.51  c-7.18,27.563-17.573,55.66-31.951,83.818c-14.376-28.158-24.767-56.255-31.946-83.818H276.948z M199.961,229.688  c1.213-24.754,4.343-48.08,8.499-69.572h73.08c4.157,21.492,7.286,44.818,8.5,69.572H199.961z M215.342,129.492  c9.57-37.359,21.394-66.835,29.656-84.983c8.263,18.148,20.088,47.624,29.66,84.983H215.342z M306.07,129.492  c-9.77-40.487-22.315-73.01-31.627-94.03c11.573,8.235,50.022,38.673,76.25,94.03H306.07z M215.553,35.46  c-9.312,21.02-21.855,53.544-31.624,94.032h-44.628C165.532,74.13,203.984,43.692,215.553,35.46z M177.44,160.117  c-3.95,21.645-6.867,44.959-8.019,69.572h-54.828c1.383-25.861,5.968-49.028,12.65-69.572H177.44z M83.976,229.688H31.401  c1.747-24.545,7.481-47.984,16.83-69.572h46.902C89.122,181.002,85.204,204.246,83.976,229.688z M114.577,260.313h54.424  c0.348,22.454,2.237,45.716,6.241,69.572h-47.983C120.521,309.288,115.92,286.115,114.577,260.313z M181.584,360.51  c7.512,31.183,18.67,63.054,34.744,95.053c-10.847-7.766-50.278-38.782-77.013-95.053H181.584z M273.635,455.632  c16.094-32.022,27.262-63.916,34.781-95.122h42.575C324.336,417.068,284.736,447.827,273.635,455.632z M314.759,329.885  c4.005-23.856,5.894-47.118,6.241-69.572h54.434c-1.317,25.849-5.844,49.016-12.483,69.572H314.759z M406.051,260.313h52.548  c-1.748,24.545-7.482,47.985-16.831,69.572h-46.694C401.041,308.996,404.882,285.736,406.051,260.313z M406.019,229.688  c-1.228-25.443-5.146-48.686-11.157-69.572h46.908c9.35,21.587,15.083,45.026,16.83,69.572H406.019z M425.309,129.492h-41.242  c-13.689-32.974-31.535-59.058-48.329-78.436C372.475,68.316,403.518,95.596,425.309,129.492z M154.252,51.06  c-16.792,19.378-34.636,45.461-48.324,78.432H64.691C86.48,95.598,117.52,68.321,154.252,51.06z M64.692,360.51h40.987  c13.482,32.637,31.076,58.634,47.752,78.034C117.059,421.262,86.318,394.148,64.692,360.51z M336.576,438.54  c16.672-19.398,34.263-45.395,47.742-78.03h40.99C403.684,394.146,372.945,421.258,336.576,438.54z"/></svg>
+          <span class="icon__fallback-text">Website</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if section.settings.social_facebook_link != blank -%}
+      {% assign amount_of_links = amount_of_links | plus: 1 %}
+      <li class="artist__social-item">
+        <a target="_blank" rel="noopener" href="{{ section.settings.social_facebook_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Facebook' }}">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-facebook" viewBox="0 0 14222 14222"><path d="M14222 7112c0 3549.352-2600.418 6491.344-6000 7024.72V9168h1657l315-2056H8222V5778c0-562 275-1111 1159-1111h897V2917s-814-139-1592-139c-1624 0-2686 984-2686 2767v1567H4194v2056h1806v4968.72C2600.418 13603.344 0 10661.352 0 7112 0 3184.703 3183.703 1 7111 1s7111 3183.703 7111 7111zm-8222 7025c362 57 733 86 1111 86-377.945 0-749.003-29.485-1111-86.28zm2222 0v-.28a7107.458 7107.458 0 0 1-167.717 24.267A7407.158 7407.158 0 0 0 8222 14137zm-167.717 23.987C7745.664 14201.89 7430.797 14223 7111 14223c319.843 0 634.675-21.479 943.283-62.013z"/></svg>
+          <span class="icon__fallback-text">Facebook</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if section.settings.social_instagram_link != blank -%}
+      {% assign amount_of_links = amount_of_links | plus: 1 %}
+      <li class="artist__social-item">
+        <a target="_blank" rel="noopener" href="{{ section.settings.social_instagram_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-instagram" viewBox="0 0 32 32"><path fill="#444" d="M16 3.094c4.206 0 4.7.019 6.363.094 1.538.069 2.369.325 2.925.544.738.287 1.262.625 1.813 1.175s.894 1.075 1.175 1.813c.212.556.475 1.387.544 2.925.075 1.662.094 2.156.094 6.363s-.019 4.7-.094 6.363c-.069 1.538-.325 2.369-.544 2.925-.288.738-.625 1.262-1.175 1.813s-1.075.894-1.813 1.175c-.556.212-1.387.475-2.925.544-1.663.075-2.156.094-6.363.094s-4.7-.019-6.363-.094c-1.537-.069-2.369-.325-2.925-.544-.737-.288-1.263-.625-1.813-1.175s-.894-1.075-1.175-1.813c-.212-.556-.475-1.387-.544-2.925-.075-1.663-.094-2.156-.094-6.363s.019-4.7.094-6.363c.069-1.537.325-2.369.544-2.925.287-.737.625-1.263 1.175-1.813s1.075-.894 1.813-1.175c.556-.212 1.388-.475 2.925-.544 1.662-.081 2.156-.094 6.363-.094zm0-2.838c-4.275 0-4.813.019-6.494.094-1.675.075-2.819.344-3.819.731-1.037.4-1.913.944-2.788 1.819S1.486 4.656 1.08 5.688c-.387 1-.656 2.144-.731 3.825-.075 1.675-.094 2.213-.094 6.488s.019 4.813.094 6.494c.075 1.675.344 2.819.731 3.825.4 1.038.944 1.913 1.819 2.788s1.756 1.413 2.788 1.819c1 .387 2.144.656 3.825.731s2.213.094 6.494.094 4.813-.019 6.494-.094c1.675-.075 2.819-.344 3.825-.731 1.038-.4 1.913-.944 2.788-1.819s1.413-1.756 1.819-2.788c.387-1 .656-2.144.731-3.825s.094-2.212.094-6.494-.019-4.813-.094-6.494c-.075-1.675-.344-2.819-.731-3.825-.4-1.038-.944-1.913-1.819-2.788s-1.756-1.413-2.788-1.819c-1-.387-2.144-.656-3.825-.731C20.812.275 20.275.256 16 .256z"/><path fill="#444" d="M16 7.912a8.088 8.088 0 0 0 0 16.175c4.463 0 8.087-3.625 8.087-8.088s-3.625-8.088-8.088-8.088zm0 13.338a5.25 5.25 0 1 1 0-10.5 5.25 5.25 0 1 1 0 10.5zM26.294 7.594a1.887 1.887 0 1 1-3.774.002 1.887 1.887 0 0 1 3.774-.003z"/></svg>
+          <span class="icon__fallback-text">Instagram</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if section.settings.social_twitter_link != blank -%}
+      {% assign amount_of_links = amount_of_links | plus: 1 %}
+      <li class="artist__social-item">
+        <a target="_blank" rel="noopener" href="{{ section.settings.social_twitter_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Twitter' }}">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-twitter" viewBox="0 0 32 32"><path fill="#444" d="M31.281 6.733q-1.304 1.924-3.13 3.26 0 .13.033.408t.033.408q0 2.543-.75 5.086t-2.282 4.858-3.635 4.108-5.053 2.869-6.341 1.076q-5.282 0-9.65-2.836.913.065 1.5.065 4.401 0 7.857-2.673-2.054-.033-3.668-1.255t-2.266-3.146q.554.13 1.206.13.88 0 1.663-.261-2.184-.456-3.619-2.184t-1.435-3.977v-.065q1.239.652 2.836.717-1.271-.848-2.021-2.233t-.75-2.983q0-1.63.815-3.195 2.38 2.967 5.754 4.678t7.319 1.907q-.228-.815-.228-1.434 0-2.608 1.858-4.45t4.532-1.842q1.304 0 2.51.522t2.054 1.467q2.152-.424 4.01-1.532-.685 2.217-2.771 3.488 1.989-.261 3.619-.978z"/></svg>
+          <span class="icon__fallback-text">Twitter</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if section.settings.social_tiktok_link != blank -%}
+        {% assign amount_of_links = amount_of_links | plus: 1 %}
+            <li class="artist__social-item">
+              <a target="_blank" rel="noopener" href="{{ section.settings.social_tiktok_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'TikTok' }}">
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-tiktok" viewBox="0 0 2859 3333"><path d="M2081 0c55 473 319 755 778 785v532c-266 26-499-61-770-225v995c0 1264-1378 1659-1932 753-356-583-138-1606 1004-1647v561c-87 14-180 36-265 65-254 86-398 247-358 531 77 544 1075 705 992-358V1h551z"/></svg>
+                <span class="icon__fallback-text">TikTok</span>
+              </a>
+            </li>
+          {%- endif -%}
+    {%- if section.settings.social_youtube_link != blank -%}
+      {% assign amount_of_links = amount_of_links | plus: 1 %}
+      <li class="artist__social-item">
+        <a target="_blank" rel="noopener" href="{{ section.settings.social_youtube_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'YouTube' }}">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-youtube" viewBox="0 0 21 20"><path fill="#444" d="M-.196 15.803q0 1.23.812 2.092t1.977.861h14.946q1.165 0 1.977-.861t.812-2.092V3.909q0-1.23-.82-2.116T17.539.907H2.593q-1.148 0-1.969.886t-.82 2.116v11.894zm7.465-2.149V6.058q0-.115.066-.18.049-.016.082-.016l.082.016 7.153 3.806q.066.066.066.164 0 .066-.066.131l-7.153 3.806q-.033.033-.066.033-.066 0-.098-.033-.066-.066-.066-.131z"/></svg>
+          <span class="icon__fallback-text">YouTube</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if section.settings.social_apple_link != blank -%}
+      {% assign amount_of_links = amount_of_links | plus: 1 %}
+      <li class="artist__social-item">
+        <a target="_blank" rel="noopener" href="{{ section.settings.social_apple_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Apple' }}">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-apple" viewBox="0 0 32 32"><path fill="#444" d="M28.893,24.01c-0.705,1.562-1.042,2.258-1.95,3.638c-1.265,1.927-3.05,4.327-5.262,4.347 c-1.965,0.018-2.47-1.278-5.137-1.263c-2.667,0.015-3.223,1.287-5.188,1.268c-2.212-0.02-3.902-2.187-5.168-4.115 c-3.54-5.388-3.91-11.712-1.727-15.073c1.552-2.39,4-3.787,6.302-3.787c2.343,0,3.817,1.285,5.755,1.285 c1.88,0,3.025-1.287,5.735-1.287c2.048,0,4.218,1.115,5.765,3.042C22.952,14.842,23.775,22.075,28.893,24.01L28.893,24.01z"></path> <path d="M20.484,5.651c0.985-1.263,1.732-3.047,1.46-4.87c-1.608,0.11-3.488,1.133-4.587,2.467 c-0.997,1.21-1.82,3.005-1.5,4.75C17.612,8.053,19.429,7.005,20.484,5.651L20.484,5.651z"></path></svg>
+          <span class="icon__fallback-text">Apple Music</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if section.settings.social_spotify_link != blank -%}
+      {% assign amount_of_links = amount_of_links | plus: 1 %}
+      <li class="artist__social-item">
+        <a target="_blank" rel="noopener" href="{{ section.settings.social_spotify_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Spotify' }}">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-spotify" viewBox="0 0 32 32"><path fill="#444" d="M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.9,0,16,0z M23.4,23.1c-0.3,0.5-0.9,0.6-1.4,0.3 c-3.8-2.3-8.5-2.8-14.1-1.5c-0.6,0.2-1-0.2-1.2-0.7c-0.2-0.6,0.2-1,0.7-1.2c6.1-1.4,11.4-0.8,15.5,1.8C23.5,22,23.6,22.6,23.4,23.1z M25.3,18.7c-0.4,0.6-1.1,0.8-1.7,0.4c-4.3-2.6-10.9-3.4-15.9-1.8c-0.6,0.2-1.4-0.2-1.5-0.8C6,15.8,6.3,15.1,7,15 c5.8-1.8,13-0.9,18,2.2C25.4,17.4,25.7,18.2,25.3,18.7z M25.4,14.2c-5.1-3-13.7-3.4-18.6-1.8c-0.8,0.2-1.6-0.2-1.8-1 c-0.2-0.8,0.2-1.6,1-1.8c5.7-1.7,15-1.4,21,2.2c0.7,0.4,1,1.4,0.6,2.1C27.1,14.4,26.2,14.6,25.4,14.2z"></path></svg>
+          <span class="icon__fallback-text">Spotify</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if section.settings.amazon_link != blank -%}
+      {% assign amount_of_links = amount_of_links | plus: 1 %}
+      <li class="artist__social-item">
+        <a target="_blank" rel="noopener" href="{{ section.settings.amazon_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Amazon' }}">
+          <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-amazon" viewBox="0 0 1100 1000"><path d="M2 776c3.333-5.333 8.666-5.667 16-1 166.666 96.667 348 145 544 145 130.666 0 259.666-24.333 387-73 3.333-1.333 8.166-3.333 14.5-6 6.333-2.667 10.833-4.667 13.5-6 10-4 17.833-2 23.5 6 5.666 8 3.833 15.333-5.5 22-12 8.667-27.334 18.667-46 30-57.334 34-121.334 60.333-192 79-70.667 18.667-139.667 28-207 28-104 0-202.334-18.167-295-54.5C162.333 909.167 79.333 858 6 792c-4-3.333-6-6.667-6-10 0-2 .666-4 2-6zm301-285c0-46 11.333-85.333 34-118 22.666-32.667 53.666-57.333 93-74 36-15.333 80.333-26.333 133-33 18-2 47.333-4.667 88-8v-17c0-42.667-4.667-71.333-14-86-14-20-36-30-66-30h-8c-22 2-41 9-57 21s-26.334 28.667-31 50c-2.667 13.333-9.334 21-20 23l-115-14c-11.334-2.667-17-8.667-17-18 0-2 .333-4.333 1-7 11.333-59.333 39.166-103.333 83.5-132C451.833 19.333 503.666 3.333 563 0h25c76 0 135.333 19.667 178 59a190.52 190.52 0 0 1 18.5 21.5c5.666 7.667 10.166 14.5 13.5 20.5 3.333 6 6.333 14.667 9 26 2.666 11.333 4.666 19.167 6 23.5 1.333 4.333 2.333 13.667 3 28 .666 14.333 1 22.833 1 25.5v242c0 17.333 2.5 33.167 7.5 47.5s9.833 24.667 14.5 31c4.666 6.333 12.333 16.5 23 30.5 4 6 6 11.333 6 16 0 5.333-2.667 10-8 14-55.334 48-85.334 74-90 78-8 6-17.667 6.667-29 2-9.334-8-17.5-15.667-24.5-23s-12-12.667-15-16-7.834-9.833-14.5-19.5c-6.667-9.667-11.334-16.167-14-19.5-37.334 40.667-74 66-110 76-22.667 6.667-50.667 10-84 10-51.334 0-93.5-15.833-126.5-47.5S303 549 303 491zm172-20c0 26 6.5 46.833 19.5 62.5S525 557 547 557c2 0 4.833-.333 8.5-1 3.666-.667 6.166-1 7.5-1 28-7.333 49.666-25.333 65-54 7.333-12.667 12.833-26.5 16.5-41.5 3.666-15 5.666-27.167 6-36.5.333-9.333.5-24.667.5-46v-25c-38.667 0-68 2.667-88 8-58.667 16.667-88 53.667-88 111zm420 322c1.333-2.667 3.333-5.333 6-8 16.666-11.333 32.666-19 48-23 25.333-6.667 50-10.333 74-11 6.666-.667 13-.333 19 1 30 2.667 48 7.667 54 15 2.666 4 4 10 4 18v7c0 23.333-6.334 50.833-19 82.5-12.667 31.667-30.334 57.167-53 76.5-3.334 2.667-6.334 4-9 4-1.334 0-2.667-.333-4-1-4-2-5-5.667-3-11 24.666-58 37-98.333 37-121 0-7.333-1.334-12.667-4-16-6.667-8-25.334-12-56-12-11.334 0-24.667.667-40 2-16.667 2-32 4-46 6-4 0-6.667-.667-8-2-1.334-1.333-1.667-2.667-1-4 0-.667.333-1.667 1-3z"/></svg>
+          <span class="icon__fallback-text">Amazon Music</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if section.settings.tour_dates_link != blank -%}
+      {% assign amount_of_links = amount_of_links | plus: 1 %}
+      <li class="artist__social-item">
+        <a target="_blank" rel="noopener" href="{{ section.settings.tour_dates_link }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'Tour Dates' }}">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" class="icon icon-tour-dates" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><g><g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"><path d="M6401.1,4975.7c-153.2-57.5,231.7,317.9-4050.4-3937.4C-68-1363.3,90.9-1187.1,108.2-1461c5.7-88.1,24.9-166.6,53.6-222.1c47.9-95.8,664.5-731.6,754.5-779.5c78.5-40.2,157-23,296.8,68.9c365.8,235.6,748.8,231.7,1070.5-13.4c252.8-189.6,386.9-488.3,360-802.4c-13.4-166.6-63.2-306.4-164.7-453.9c-88.1-128.3-105.3-180-86.2-256.6c17.2-74.7,656.9-712.4,783.3-783.3c86.2-47.9,116.8-53.6,260.5-53.6c145.6,0,174.3,5.7,264.3,57.5c124.5,72.8,6068.9,6003.8,6147.4,6137.9c44,74.7,51.7,107.2,51.7,239.4c0,122.6-9.6,170.4-46,239.4c-49.8,95.8-668.3,733.5-756.5,779.4c-76.6,40.2-159,23-283.4-61.3c-281.5-185.8-614.7-212.6-911.6-70.9c-59.4,26.8-160.9,101.5-227.9,162.8c-325.6,306.4-383,783.3-137.9,1162.5c91.9,141.7,109.2,220.2,69,298.8c-47.9,90-683.7,706.7-779.4,754.5C6719,4998.6,6504.6,5014,6401.1,4975.7z M6640.5,4596.5c23-11.5,155.1-132.1,291.1-268.1l250.9-249l-61.3-126.4c-178.1-367.7-168.5-806.2,26.8-1183.5c105.3-203,348.6-440.5,559.2-542c218.3-107.2,354.3-139.8,584.1-141.7c218.3,0,373.4,32.6,570.7,122.6l130.2,61.3l239.4-239.4c264.3-262.4,304.5-316,277.7-384.9c-9.6-24.9-262.4-287.3-561.1-584.1C8523,636.1,8400.5,525,8377.5,538.4c-15.3,9.6-61.3,19.2-101.5,19.2c-136,0-227.9-153.2-164.7-271.9c19.2-36.4-180-241.3-2282.8-2344.1c-1601-1601-2321.1-2307.7-2355.5-2315.3c-80.4-17.2-139.8,24.9-396.4,283.4l-237.5,237.5l59.4,116.8c95.8,189.6,139.8,384.9,139.8,607.1c-1.9,227.9-34.5,367.7-136,574.5c-132.1,268.1-325.6,459.6-605.2,593.7c-203,97.7-342.8,130.2-565,130.2c-193.4,0-356.2-40.2-561.1-134.1l-149.4-70.9l-239.4,239.4c-262.4,258.5-302.6,317.9-285.3,398.3c7.7,38.3,679.9,718.2,2319.2,2346c1832.7,1823.2,2313.4,2290.4,2340.2,2279c17.2-7.7,63.2-17.2,101.5-21.1c95.8-11.5,189.6,74.7,189.6,176.2c0,38.3-7.7,84.3-17.2,103.4c-15.3,26.8,72.8,124.5,520.9,570.7c296.8,294.9,553.5,542,568.8,547.7C6565.8,4621.4,6596.5,4619.4,6640.5,4596.5z"/><path d="M5675.3,2968.6c-61.3-67-70.8-141.7-28.7-224.1c30.7-55.5,258.5-285.4,337.1-337.1c72.8-47.9,158.9-38.3,227.9,24.9c47.9,46,59.4,70.9,59.4,137.9c0,78.5-7.7,90-187.7,270c-180,180-191.5,187.7-270,187.7C5746.2,3028,5721.3,3016.5,5675.3,2968.6z"/><path d="M6502.6,2145.2c-63.2-63.2-76.6-137.9-38.3-214.5c30.7-61.3,285.4-317.9,346.7-350.5c137.9-72.8,283.4,13.4,283.4,166.6c0,78.5-9.6,90-187.7,270c-176.2,176.2-193.4,187.7-266.2,187.7C6577.3,2204.5,6548.6,2193,6502.6,2145.2z"/><path d="M7370.2,1360c-84.3-42.1-126.4-168.5-82.4-252.8c30.6-61.3,285.4-317.9,346.6-350.5c126.4-67,264.3-5.7,291.1,132.1c15.3,80.4-23,139.8-216.4,325.6c-147.4,141.7-181.9,166.6-235.5,164.7C7439.1,1379.1,7393.1,1369.5,7370.2,1360z"/></g></g></svg>
+          <span class="icon__fallback-text">Tour Dates</span>
+        </a>
+      </li>
+    {%- endif -%}
+  </ul>
+  {%- if section.settings.au_store != blank -%}
+    <style>
+      .aus-store {
+        width: 100%;
+        max-width: {{ amount_of_links | times: 45 }}px; 
+        margin: 1.25em auto; 
+        display: block;
+      }
+
+      @media(min-width: 741px) {
+        .aus-store {
+          max-width: {{ amount_of_links | times: 50 }}px;
+        }
+      }
+
+      .artist__social.aus-store{
+        text-align:center;
+      }
+    </style>
+    <a 
+      class="btn btn--secondary btn--full aus-store" 
+      target="_blank" 
+      rel="noopener" 
+      href="{{ section.settings.au_store }}" 
+      title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: 'OpenStage' }}"
+    >
+      Subscribe For Updates
+    </a>
+{%- endif -%}
+</div>
+<style>
+  {% if 'collection.metafields.custom.artist_collection_background_color' != blank %}
+
+    .collection-content {
+      background-color: {{ collection.metafields.custom.artist_collection_background_color }};
+    }
+    .artist__social  {
+      background-color: {{ collection.metafields.custom.artist_collection_background_color }};
+      margin-bottom:0px;
+    }
+   #shopify-section-template--17850775503027__artist_social_KTdMAj {
+      background-color: {{ collection.metafields.custom.artist_collection_background_color }};
+
+    }
+    
+  {% endif %}
+</style>
+{% schema %}
+{
+  "name": "Artist Social",
+  "settings": [
+    {
+      "type": "select",
+      "id": "button_alignment",
+      "label": "Button Alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Accounts"
+    },
+    {
+      "type": "url",
+      "id": "social_website",
+      "label": "Website"
+    },
+    {
+      "type": "url",
+      "id": "social_twitter_link",
+      "label": "Twitter"
+    },
+    {
+      "type": "url",
+      "id": "social_facebook_link",
+      "label": "Facebook"
+    },
+    {
+      "type": "url",
+      "id": "social_instagram_link",
+      "label": "Instagram"
+    },
+    {
+      "type": "url",
+      "id": "social_tiktok_link",
+      "label": "TikTok"
+    },
+    {
+      "type": "url",
+      "id": "social_youtube_link",
+      "label": "YouTube"
+    },
+    {
+      "type": "url",
+      "id": "social_apple_link",
+      "label": "Apple Music"
+    },
+    {
+      "type": "url",
+      "id": "social_spotify_link",
+      "label": "Spotify"
+    },
+    {
+      "type": "url",
+      "id": "amazon_link",
+      "label": "Amazon Music"
+    },
+    {
+      "type": "url",
+      "id": "tour_dates_link",
+      "label": "Tour Dates"
+    },
+    {
+      "type": "url",
+      "id": "au_store",
+      "label": "OpenStage"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Artist Social"
+    }
+  ]
+}
+{% endschema %}

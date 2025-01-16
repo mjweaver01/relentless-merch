@@ -1,0 +1,171 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "Shop all",
+            "color_accent": "#000000",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/za.jpg",
+            "parallax_direction": "top",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "slideshow-0"
+      ],
+      "settings": {
+        "section_height": "550px",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 7,
+        "lazyload_images": true
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New Arrivals",
+        "home_featured_products": "as-cities-burn",
+        "per_row": 4,
+        "rows": 2,
+        "mobile_scrollable": false,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "featured-collections-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "as-cities-burn",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "featured-collections-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-callous-daoboys",
+            "title": "The Callous daoboys",
+            "focal_point": "center center"
+          }
+        },
+        "featured-collections-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "chamber",
+            "title": "Chamber",
+            "focal_point": "center center"
+          }
+        },
+        "featured-collections-3": {
+          "type": "collection",
+          "settings": {
+            "collection": "dead-icarus",
+            "title": "Dead Icarus",
+            "focal_point": "center center"
+          }
+        },
+        "collection_yQw3jX": {
+          "type": "collection",
+          "settings": {
+            "collection": "enterprise-earth",
+            "title": "Enterprise Earth",
+            "focal_point": "center center"
+          }
+        },
+        "collection_zy7nGA": {
+          "type": "collection",
+          "settings": {
+            "collection": "salt-creek",
+            "title": "Salt Creek",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "featured-collections-0",
+        "featured-collections-1",
+        "featured-collections-2",
+        "featured-collections-3",
+        "collection_yQw3jX",
+        "collection_zy7nGA"
+      ],
+      "settings": {
+        "title": "Featured Artists",
+        "divider": true,
+        "per_row": 3,
+        "enable_gutter": true
+      }
+    },
+    "contact_form_Aa3Pgf": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+        "title": "Contact us",
+        "text": "",
+        "show_phone": false,
+        "narrow_column": true
+      }
+    },
+    "promo_grid_p6JJph": {
+      "type": "promo-grid",
+      "blocks": {
+        "advanced_hMMhnQ": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "relentless merch",
+            "heading": "need an online store?",
+            "textarea": "",
+            "cta_text1": "Start Here",
+            "cta_link1": "shopify:\/\/pages\/contact",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/DSCF1470.jpg",
+            "video_url": "",
+            "width": "100",
+            "height": 400,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": true,
+            "framed": true
+          }
+        }
+      },
+      "block_order": [
+        "advanced_hMMhnQ"
+      ],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 0,
+        "space_above": false,
+        "space_below": false,
+        "lazyload_images": true
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "featured-collection",
+    "featured-collections",
+    "contact_form_Aa3Pgf",
+    "promo_grid_p6JJph"
+  ]
+}
