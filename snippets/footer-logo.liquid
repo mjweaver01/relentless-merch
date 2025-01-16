@@ -12,14 +12,26 @@
       {%- capture widths -%}{{ block.settings.desktop_logo_height | times: block.settings.logo.aspect_ratio }}, {{ block.settings.desktop_logo_height | times: block.settings.logo.aspect_ratio | times: 2 }}{%- endcapture -%}
       {%- capture style -%}max-width: {{ block.settings.desktop_logo_height | times: block.settings.logo.aspect_ratio }}px;max-height: {{ block.settings.desktop_logo_height }}px;{%- endcapture -%}
 
+      {% comment %} Artist collection logo {% endcomment %}
+      {%-
+        liquid 
+        assign img_src = block.settings.logo
+        assign logo_alt = block.settings.logo.alt
+
+        if collection.metafields.custom.artist_logo
+          assign img_src = collection.metafields.custom.artist_logo
+          assign logo_alt = collection.metafields.custom.artist_logo.alt
+        endif
+      -%}
+
       {%- render 'image-element',
-        img: block.settings.logo,
+        img: img_src,
         img_width: width,
         img_height: height,
         sizes: sizes,
         widths: widths,
         style: style,
-        alt: block.settings.logo.alt | default: shop.name,
+        alt: logo_alt | default: shop.name,
       -%}
     </a>
   </div>

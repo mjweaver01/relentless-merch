@@ -69,8 +69,19 @@
         {%- capture mobile_sizes -%}{{ block.settings.mobile_logo_width }}px{%- endcapture -%}
         {%- capture mobile_widths -%}{{ block.settings.mobile_logo_width }}, {{ block.settings.mobile_logo_width | times: 2 }}{%- endcapture -%}
 
+        {% comment %} Artist collection logo {% endcomment %}
+        {%- liquid 
+          assign img_src = block.settings.logo
+          assign logo_alt = block.settings.logo.alt
+
+          if collection.metafields.custom.artist_logo
+            assign img_src = collection.metafields.custom.artist_logo
+            assign logo_alt = collection.metafields.custom.artist_logo.alt
+          endif
+        -%}
+
         {%- render 'image-element',
-          img: block.settings.logo,
+          img: img_src,
           img_width: width,
           img_height: height,
           img_tag_width: block.settings.desktop_logo_width,
@@ -78,11 +89,11 @@
           widths: widths,
           classes: 'small--hide',
           loading: 'eager',
-          alt: block.settings.logo.alt | default: shop.name,
+          alt: logo_alt | default: shop.name,
           itemprop: 'logo',
         -%}
         {%- render 'image-element',
-          img: block.settings.logo,
+          img: img_src,
           img_width: mobile_width,
           img_height: mobile_height,
           img_tag_width: block.settings.mobile_logo_width,
@@ -90,7 +101,7 @@
           widths: mobile_widths,
           classes: 'medium-up--hide',
           loading: 'eager',
-          alt: block.settings.logo.alt | default: shop.name,
+          alt: logo_alt | default: shop.name,
         -%}
       </a>
       {%- if block.settings.logo-inverted -%}
@@ -112,8 +123,19 @@
           {%- capture mobile_sizes -%}{{ block.settings.mobile_logo_width }}px{%- endcapture -%}
           {%- capture mobile_widths -%}{{ block.settings.mobile_logo_width }}, {{ block.settings.mobile_logo_width | times: 2 }}{%- endcapture -%}
 
+          {% comment %} Artist collection logo {% endcomment %}
+          {%- liquid 
+            assign img_src = block.settings.logo
+            assign logo_alt = block.settings.logo.alt
+
+            if collection.metafields.custom.artist_logo
+              assign img_src = collection.metafields.custom.artist_logo
+              assign logo_alt = collection.metafields.custom.artist_logo.alt
+            endif
+          -%}
+
           {%- render 'image-element',
-            img: block.settings.logo-inverted,
+            img: img_src,
             img_width: width,
             img_height: height,
             img_tag_width: block.settings.desktop_logo_width,
@@ -121,11 +143,11 @@
             widths: widths,
             classes: 'small--hide',
             loading: 'eager',
-            alt: block.settings.logo-inverted.alt | default: shop.name,
+            alt: logo_alt | default: shop.name,
             itemprop: 'logo',
           -%}
           {%- render 'image-element',
-            img: block.settings.logo-inverted,
+            img: img_src,
             img_width: mobile_width,
             img_height: mobile_height,
             img_tag_width: block.settings.mobile_logo_width,
@@ -133,7 +155,7 @@
             widths: mobile_widths,
             classes: 'medium-up--hide',
             loading: 'eager',
-            alt: block.settings.logo-inverted.alt | default: shop.name,
+            alt: logo_alt | default: shop.name,
           -%}
         </a>
       {%- endif -%}
